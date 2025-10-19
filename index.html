@@ -1,45 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>半期目標作成ツール（ローカル版）</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KPI目標作成AIツール</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>半期目標作成ツール（ローカル版）</h1>
+    <h1>KPI目標作成AIツール</h1>
 
-    <div class="form">
-      <label>職種<input id="role" placeholder="例：営業／事務／企画など"></label>
-      <label>担当業務<input id="duties" placeholder="例：顧客対応／資料作成など"></label>
-      <label>重点テーマ<input id="theme" placeholder="例：業務効率化／顧客満足度向上など"></label>
+    <div class="input-section">
+      <label for="title">タイトル（例：業務改善）</label>
+      <input type="text" id="title" placeholder="例：業務改善" />
 
-      <div class="buttons">
-        <button id="generateBtn">作成</button>
-        <button id="regenerateBtn">再作成</button>
-        <button id="saveBtn">保存</button>
-      </div>
+      <label for="detail">目標詳細</label>
+      <textarea id="detail" rows="4" placeholder="AIが自動生成します"></textarea>
+
+      <label for="action">アクションプラン（2か月ごと）</label>
+      <textarea id="action" rows="6" placeholder="AIが自動生成します"></textarea>
+
+      <button id="generateBtn">作成する</button>
+      <p id="status"></p>
     </div>
-
-    <hr/>
-
-    <div id="result">
-      <h2>タイトル</h2>
-      <input id="title" class="editable"/>
-
-      <h2>目標詳細</h2>
-      <textarea id="detail" class="editable" rows="6"></textarea>
-
-      <h2>具体的アクションとスケジュール</h2>
-      <table id="planTable">
-        <thead>
-          <tr><th>月</th><th>アクション（編集可）</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
-
-    <div id="status"></div>
   </div>
 
   <script src="app.js"></script>
