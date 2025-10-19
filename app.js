@@ -16,6 +16,8 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   try {
     // DuckDuckGo APIを使ってWeb検索
     const searchUrl = `https://api.duckduckgo.com/?q=${encodeURIComponent(title)}&format=json&no_html=1`;
+    const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(searchUrl)}`;
+    const res = await fetch(proxyUrl);
     const res = await fetch(searchUrl);
     const data = await res.json();
 
@@ -59,3 +61,4 @@ ${title}に関して、社内外の一般的な課題を踏まえ、定量的改
     status.textContent = "エラーが発生しました。もう一度お試しください。";
   }
 });
+
