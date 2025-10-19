@@ -1,0 +1,64 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background: #fafafa;
+  margin: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form label {
+  display: block;
+  margin: 10px 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 16px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0078d4;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005ea6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#status {
+  margin-top: 10px;
+  color: #666;
+  text-align: right;
+  font-size: 0.9em;
+}
